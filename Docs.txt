@@ -28,3 +28,16 @@
 //=> we need to make sure that test does not finish until callback is called
 => pass the done variable to your callback which is function to indicate => if you call done() now, then only the test will finished
 //see the code for this
+
+//mongo installation
+download mongo tar and extract => move this to user directory i.e. SachinAggarwal Home => Now rename this folder to mongo and create new folder mongo-data where all databased will be stored
+//open mongo/bin in terminal by dragging
+//do ls => will show all the executables which in this folder which can be used as commands
+//   do this :   ./mongod --dbpath ~/mongo-data => this starts the database server and we have given path to db for storage which was folder we created earlier
+//open another terminal window by dragging same bin folder => now run ./mongo command => this will connect the mongo to databse server that is running in other terminal window
+//run db commands like : db.Todos.insert({text:'this is text'}) => will return WriteResult({ "nInserted" : 1 }) meaning that nInserted ie.. number of inserted = 1
+//>  db.Todos.find()
+{ "_id" : ObjectId("5a51292c05194486324d35da"), "text" : "random text" }
+//now keep the server running, we will now install gui for mongo which is robomongo
+//open it => click create, give connection name, give port number of the server running =>  when you ran the server, it must have given you the port number , click save and then connect
+//in this go to test => collecitons and open your database 
