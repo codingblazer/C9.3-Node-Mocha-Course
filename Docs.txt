@@ -40,4 +40,7 @@ download mongo tar and extract => move this to user directory i.e. SachinAggarwa
 { "_id" : ObjectId("5a51292c05194486324d35da"), "text" : "random text" }
 //now keep the server running, we will now install gui for mongo which is robomongo
 //open it => click create, give connection name, give port number of the server running =>  when you ran the server, it must have given you the port number , click save and then connect
-//in this go to test => collecitons and open your database 
+//in this go to test => collecitons and open your database
+
+//sql vs nosql => sql has table while nosql has array of objects => record in sql = object/document in nosql => column in sql = field in nosql => in sql, since table, every record has same fields but in nosql every record may have diffrent field.
+sql is called table while nosql is called collection
