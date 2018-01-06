@@ -9,3 +9,9 @@
 //Now lets see a way to run the tests continously as we make code changes using nodemon
 //when the nodemon keeps server running like we did before, it actually keeps running the command to run the file => we can now use --exec to run any command in the world continously
 //nodemon --exec 'npm test' =>
+
+//now lets see how to create our custom script in json package
+//"test-custom": "nodemon --exec 'npm test'"
+//we can create any script in similar way.
+
+//Now to start the script, you have to do this in terminal : npm run script_name => npm run test-custom  
