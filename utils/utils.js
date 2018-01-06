@@ -8,3 +8,9 @@ module.exports.setName = (user, fullname) => {
   user.lastname = names[1];
   return user;
 };
+
+module.exports.asyncAdd = (a,b,callback) => {
+  setTimeout(()=>{
+    callback(a + b);
+  },1000);
+};

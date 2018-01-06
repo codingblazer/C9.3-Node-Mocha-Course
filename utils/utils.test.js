@@ -30,3 +30,9 @@ it('should expect some value',()=>{
 it('should return correct names',()=>{
   expect(utils.setName({},'Sachin Aggarwal')).toEqual({firstname:'Sachin',lastname:'Aggarwal'});
 });
+
+it('should add asynch',()=>{
+  utils.asyncAdd(4,3,(sum)=>{
+    expect(sum).toBe(10).toBeA('number');
+  });
+});

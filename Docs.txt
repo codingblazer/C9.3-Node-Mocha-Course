@@ -21,3 +21,5 @@
 //npm install expect@1.20.2 --save-dev
 //now see the docs on github for all the methods => we wont be using simple if else, we will be using the assertions
 //we start off by expect() method and passing the variable to be tested in it and then we chain the assertion methods from the docs like we did for toBeA
+
+//now we will see testing of asynch functions
