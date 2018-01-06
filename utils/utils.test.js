@@ -31,8 +31,9 @@ it('should return correct names',()=>{
   expect(utils.setName({},'Sachin Aggarwal')).toEqual({firstname:'Sachin',lastname:'Aggarwal'});
 });
 
-it('should add asynch',()=>{
+it('should add asynch',(done)=>{ //done as argument to tell this is asynch type
   utils.asyncAdd(4,3,(sum)=>{
-    expect(sum).toBe(10).toBeA('number');
+    expect(sum).toBe(7).toBeA('number');
+    done(); //to tell mocha to  finish the test now
   });
 });

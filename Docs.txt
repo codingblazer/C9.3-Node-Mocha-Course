@@ -23,3 +23,8 @@
 //we start off by expect() method and passing the variable to be tested in it and then we chain the assertion methods from the docs like we did for toBeA
 
 //now we will see testing of asynch functions
+//in the previous async test, the test was passing even for 10 but should have failed
+//this is because there was a one second of time wait => callback was called after 1 sec => but before that one second, the mocha finished the test...the 'it' portion was executed and it showed no error => test passed
+//=> we need to make sure that test does not finish until callback is called
+=> pass the done variable to your callback which is function to indicate => if you call done() now, then only the test will finished
+//see the code for this
