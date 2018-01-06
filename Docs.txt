@@ -1,0 +1,11 @@
+//install mocha
+//npm install mocha@3.0.0 --save-dev
+//save dev means that this is only for dev purpose since testing => it wont be downloaded by hroku to cause any delay
+//utils.test.js extension is used to tell mocha that this file will contain the tests
+//tests are written using "it" and throw function - create your code in utils.js and write test for these in utils.test.js and run as below
+//In package.json, scripts, test => write the script => "test": "mocha **/*.test.js"
+//in terminal do, npm test which will run the script we just added i.e. run the tests
+
+//Now lets see a way to run the tests continously as we make code changes using nodemon
+//when the nodemon keeps server running like we did before, it actually keeps running the command to run the file => we can now use --exec to run any command in the world continously
+//nodemon --exec 'npm test' =>
