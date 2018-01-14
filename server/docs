@@ -4,3 +4,5 @@ visit the github repo of this for seeing the syntax
 
 making test => pass the app object of the server to request, and what result you expect in expect and done can be called inside end and then the npm run test-custom
 we can also give expect on status code : 200
+
+supertest only supports equal assertion (by value) unlike expect library => to make all other assertions, we have to use expect library along with supertest => for this we can put a callback inside a supertest expect() which will be called and return us a response object and then inside this calback we can use expect lib to perform all the test on this response object

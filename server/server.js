@@ -4,7 +4,8 @@ var app = express();
 
 app.get('/',(req,res)=>{
   res.status(404).send({
-    error:'page not found'
+    error:'page not found',
+    name :'sample todo name'
   });
 });
 
