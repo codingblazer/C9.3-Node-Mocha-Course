@@ -7,3 +7,16 @@ Now, inside app.js, we want to test handleSignUp, but we waant to test that each
 => we will see how to use these mock func in real code.
 
 rewire is library to mock the variables and almost everything => We will create a mock copy of complete app.js file that we are testing => we will mock each var, each func and then use these mocks for our testing purpose.
+
+Let's do spy on actual code =>
+
+var app = rewire('./app'); => here the app object will be used to wire the mocks => we will create mocks of var or func and then inside app.js, we will replace original var by these created spy/mocks
+=> when we will call anything in app.js, instead of original var, their spy will be called (if we replaced them)
+
+var db ={}
+=> here we have created a simple var which tells that saveUser is equal to spy we have created using .createSpy
+
+app.set => now we are saying that inside app.js, find the 'db' variable => and substitute the db variable we created above to it => abpve in db variable, we just added saveUser = createSpy func => in app.js, now db.saveUser is = spy functions
+
+now inside it(), like we did in android testing, we are first calling handleSignUp of app.js => when it is called, inside its definition, the spy will be called instead of original saveUser
+next, like in android, we will match i.e. that expect db.saveUser func (which is equal to saying : db.spy ) => expect db.spy to be called with given arguments
