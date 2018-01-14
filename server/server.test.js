@@ -5,7 +5,9 @@ var app = require('./server').app;
 it('should return hello',(done)=>{
   request(app)
     .get('/')
-    .expect(200)
-    .expect('hello')
+    .expect(404)
+    .expect({
+      error:'page not found'
+    })
     .end(done);
 });
