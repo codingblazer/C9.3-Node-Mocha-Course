@@ -1,0 +1,9 @@
+db file contains all the methods for database accessign
+Now, inside app.js, we want to test handleSignUp, but we waant to test that each of 3 functions : checkEmailNotExist, saveUser, sendWelcomeEmail workand gets called
+=> to test them, we will have to call handleSignUp but we dont want a call to it => because test should not effect the database like user database => we create a mock of functions like saveUser and test if that mock is called or not to test handleSignUp
+
+=> lets leave this sign up, saveUser for while. Lets see how to create mock which is called spy and then call it => it is present in expect lib
+=> in app.test.js, we created .createSpy() which returns the spy-function/mock-function. This spy is right now independent spy i.e. mock of no other func (we will learn about it later). We have stored this mock func in var spy. Now call this mock func. Now use expect to check if this mock function was called, when we called in above line. Similarly we can check whether mock function was called with some particular arg or checkEmailNotExist
+=> we will see how to use these mock func in real code.
+
+rewire is library to mock the variables and almost everything => We will create a mock copy of complete app.js file that we are testing => we will mock each var, each func and then use these mocks for our testing purpose.
