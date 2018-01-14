@@ -1,0 +1,6 @@
+supertest is lib for testing the express framework
+visit the github repo of this for seeing the syntax
+
+
+making test => pass the app object of the server to request, and what result you expect in expect and done can be called inside end and then the npm run test-custom
+we can also give expect on status code : 200
